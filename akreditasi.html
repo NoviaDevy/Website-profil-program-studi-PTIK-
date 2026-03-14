@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akreditasi - Pendidikan Teknik Informatika & Komputer</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .accreditation-page {
+      background: #f2f2f2;
+      min-height: 100vh;
+      padding: 160px 0 60px;
+    }
+
+    .accreditation-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .accreditation-title {
+      color: #021748;
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .accreditation-subtitle {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .back-btn,
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      height: 48px;
+      padding: 0 20px;
+      background: #021748;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover,
+    .download-btn:hover {
+      background: #45005b;
+      color: #ffffff;
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 900px;
+      border: 1px solid #d9d9d9;
+      background: #fff;
+    }
+
+    .pdf-fallback {
+      margin-top: 16px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 991px) {
+      .accreditation-page {
+        padding: 145px 0 40px;
+      }
+
+      .accreditation-wrapper {
+        padding: 20px;
+      }
+
+      .accreditation-title {
+        font-size: 2rem;
+      }
+
+      .pdf-viewer {
+        height: 700px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .accreditation-page {
+        padding: 135px 0 30px;
+      }
+
+      .accreditation-wrapper {
+        padding: 16px;
+      }
+
+      .accreditation-title {
+        font-size: 1.5rem;
+      }
+
+      .pdf-viewer {
+        height: 500px;
+      }
+
+      .back-btn,
+      .download-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- TOPBAR -->
+  <div id="topbar" class="topbar fixed-top">
+    <div class="container d-flex justify-content-between align-items-center py-2 flex-wrap">
+      <div class="d-flex align-items-center gap-2">
+        <button id="idBtn" class="flag-btn active-lang" type="button">
+          <img src="assets/indonesia.png" alt="Indonesia" />
+        </button>
+        <button id="enBtn" class="flag-btn" type="button">
+          <img src="assets/inggris.png" alt="English" />
+        </button>
+      </div>
+
+      <div class="d-flex flex-wrap gap-4 fw-bold top-links">
+        <a href="public-info.html" data-id="Informasi Publik" data-en="Public Information">Informasi Publik</a>
+        <a href="integrity-zone.html" data-id="Zona Integritas" data-en="Integrity Zone">Zona Integritas</a>
+        <a href="agenda.html" data-id="Agenda" data-en="Agenda">Agenda</a>
+        <a href="contacts.html" data-id="Kontak" data-en="Contacts">Kontak</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVBAR -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark main-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logoptik.png" alt="Logo PTIK" class="logo-img" />
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="index.html" data-id="Home" data-en="Home">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-custom dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-id="Profil" data-en="Profile">Profil</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" data-id="Gambaran Umum" data-en="Overview">Gambaran Umum</a>
+                <ul class="submenu">
+                  <li><a class="dropdown-item" href="#" data-id="Profil PTIK UNS" data-en="PTIK UNS Profile">Profil PTIK UNS</a></li>
+                  <li><a class="dropdown-item" href="#" data-id="Visi, Misi, dan Tujuan" data-en="Vision, Mission, and Goals">Visi, Misi, dan Tujuan</a></li>
+                  <li><a class="dropdown-item" href="#" data-id="Profil Lulusan" data-en="Graduate Profile">Profil Lulusan</a></li>
+                  <li><a class="dropdown-item" href="akreditasi.html" data-id="Akreditasi Program Studi" data-en="Study Program Accreditation">Akreditasi Program Studi</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" data-id="Staf Akademik" data-en="Academic Staff">Staf Akademik</a>
+                <ul class="submenu">
+                  <li><a class="dropdown-item" href="#" data-id="Struktur Organisasi Program Studi" data-en="Study Program Organizational Structure">Struktur Organisasi Program Studi</a></li>
+                  <li><a class="dropdown-item" href="#" data-id="Dosen" data-en="Lecturer">Dosen</a></li>
+                  <li><a class="dropdown-item" href="#" data-id="Panduan Staf Lengkap" data-en="Full Staff Handbook">Panduan Staf Lengkap</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#" data-id="Akademik" data-en="Academic">Akademik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#" data-id="Fasilitas" data-en="Facility">Fasilitas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#" data-id="Magang Industri" data-en="Industrial Internship">Magang Industri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#" data-id="Kemahasiswaan" data-en="About Student">Kemahasiswaan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#" data-id="Portofolio" data-en="Portfolio">Portofolio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <section class="accreditation-page">
+    <div class="container">
+      <div class="accreditation-wrapper">
+        <h1 class="accreditation-title" data-id="Sertifikat Akreditasi" data-en="Accreditation Certificate">
+          Sertifikat Akreditasi
+        </h1>
+
+        <p class="accreditation-subtitle"
+          data-id="Berikut adalah dokumen sertifikat akreditasi program studi yang dapat dilihat langsung maupun diunduh."
+          data-en="Below is the study program accreditation certificate document that can be viewed directly or downloaded.">
+          Berikut adalah dokumen sertifikat akreditasi program studi yang dapat dilihat langsung maupun diunduh.
+        </p>
+
+        <div class="pdf-toolbar">
+          <a href="index.html" class="back-btn" data-id="Kembali ke Beranda" data-en="Back to Home">
+            Kembali ke Beranda
+          </a>
+
+          <a href="assets/akreditasi.pdf" class="download-btn" download data-id="Unduh PDF" data-en="Download PDF">
+            Unduh PDF
+          </a>
+        </div>
+
+        <iframe
+          class="pdf-viewer"
+          src="assets/akreditasi.pdf"
+          title="PDF Sertifikat Akreditasi">
+        </iframe>
+
+        <p class="pdf-fallback"
+          data-id="Jika dokumen tidak tampil, silakan gunakan tombol Unduh PDF untuk membuka file secara manual."
+          data-en="If the document does not appear, please use the Download PDF button to open the file manually.">
+          Jika dokumen tidak tampil, silakan gunakan tombol Unduh PDF untuk membuka file secara manual.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

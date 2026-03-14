@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - PTIK UNS</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .contact-section {
+      min-height: 100vh;
+      padding: 160px 0 80px;
+      background: #f3f3f3;
+    }
+
+    .contact-box {
+      background: #ffffff;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #021748;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info i {
+      color: #021748;
+      margin-right: 10px;
+    }
+
+    .contact-info a {
+      color: #021748;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      color: #45005b;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    @media (max-width: 991px) {
+      .contact-section {
+        padding: 140px 0 60px;
+      }
+
+      .contact-box {
+        padding: 24px;
+      }
+
+      .contact-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .contact-section {
+        padding: 130px 0 40px;
+      }
+
+      .contact-title {
+        font-size: 1.6rem;
+      }
+
+      .map-box iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <!-- TOPBAR -->
+  <div id="topbar" class="topbar fixed-top">
+    <div class="container d-flex justify-content-between align-items-center py-2 flex-wrap">
+      <div class="d-flex align-items-center gap-2">
+        <button id="idBtn" class="flag-btn active-lang" type="button">
+          <img src="assets/indonesia.png" alt="Indonesia" />
+        </button>
+        <button id="enBtn" class="flag-btn" type="button">
+          <img src="assets/inggris.png" alt="English" />
+        </button>
+      </div>
+
+      <div class="d-flex flex-wrap gap-4 fw-bold top-links">
+        <a href="public-info.html">Informasi Publik</a>
+        <a href="integrity-zone.html">Zona Integritas</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="contacts.html">Kontak</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVBAR -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark main-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.htm">
+        <img src="assets/logoptik.png" alt="Logo PTIK" class="logo-img" />
+      </a>
+
+      <button
+        class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="index.htm">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#">Akademik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#">Fasilitas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#">Magang Industri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#">Kemahasiswaan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-custom" href="#">Portofolio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTACT CONTENT -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <h2 class="contact-title">Address &amp; Contact</h2>
+
+            <div class="contact-info">
+              <p>
+                <i class="bi bi-building"></i>
+                <strong>Informatics and Computer Engineering Education</strong>
+              </p>
+
+              <p>
+                <i class="bi bi-geo-alt"></i>
+                Kampus V JPTK FKIP UNS Pabelan
+              </p>
+
+              <p>
+                <i class="bi bi-geo"></i>
+                Jl. Jend. Ahmad Yani 200A Pabelan, Kartasura, Sukoharjo 57100
+              </p>
+
+              <p>
+                <i class="bi bi-telephone"></i>
+                Telp/Fax : (0271) 648939
+              </p>
+
+              <p>
+                <i class="bi bi-envelope"></i>
+                E-mail : ptik@fkip.uns.ac.id
+              </p>
+
+              <p>
+                <i class="bi bi-globe"></i>
+                Website :
+                <a href="http://ptik.fkip.uns.ac.id" target="_blank">
+                  ptik.fkip.uns.ac.id
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="map-box">
+              <iframe
+                src="https://www.google.com/maps?q=PTIK+FKIP+UNS&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Lokasi PTIK FKIP UNS"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
